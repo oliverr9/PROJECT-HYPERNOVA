@@ -26,6 +26,7 @@ header {
   align-items: center; 
   justify-content: center;
   gap: 24px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.274);
 }
 header a {
   height: 100%;
@@ -158,12 +159,13 @@ main {
   display: flex;
   justify-content: center;
 }
-.home-main-content {
+.main-content {
   width: 70%;
   height: 100%;
   background-color: #3d3d3d;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.274);
   padding: 40px 60px;
+  border: 1px solid #14cbdf5d;
 }
 h1 {
   text-align: center;
@@ -199,19 +201,33 @@ h1 {
           backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 40px #00000038;
+  
   border-radius: 25px;
-  padding: 30px;
-  border: 1px solid $azul-main;
+  padding: 15px;
 }
 
 .card__side--front-1 {
   background-color: #444444;
 }
-.card_image--1 img {
+.card_image--1 {
   width: 100%;
-  height: auto;
-  border-radius: 15px;
+  height: 230px;
+  margin-bottom: 15px;
+  background-image: url(../assets/desenvolupament.jpg);
+  background-size: cover;
+  background-position: 90%;
+  border-radius: 20px;
+  -webkit-mask-image:-webkit-gradient(linear, right top, right bottom, from(rgb(255, 0, 0)), to(rgb(255, 0, 0)));
+  mask-image: linear-gradient(to bottom, rgb(255, 0, 0) 0%, rgba(255, 0, 0, 0) 89%) ;
+  margin: 0;
+}
+.card__title--1 h4 {
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 17px;
+  text-align: center;
+  margin-top: -10px;
 }
 .card__side--front-2 {
   background-color: #444444;
@@ -226,12 +242,16 @@ h1 {
 
 .card__side--back-1 {
   background-color: #444444;
+  box-shadow: 0 0 40px #25a2b063;
+
 }
 .card__side--back-2 {
   background-color: #444444;
+  box-shadow: 0 0 40px #25a2b063;
 }
 .card__side--back-3 {
   background-color: #444444;
+  box-shadow: 0 0 40px #25a2b063;
 }
 
 .card:hover .card__side--front-1,
@@ -239,6 +259,7 @@ h1 {
 .card:hover .card__side--front-3 {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
+
 }
 
 .card:hover .card__side--back {
