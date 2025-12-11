@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 body {
@@ -18,13 +20,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 24px;
+}
+
+header a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-hypernova-header {
   height: 90%;
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
   transition: transform 0.4s;
+  cursor: pointer;
 }
 
 .logo-hypernova-header:hover {
@@ -34,7 +44,7 @@ header {
 ul {
   display: flex;
   position: relative;
-  gap: 25px;
+  gap: 30px;
 }
 
 ul li {
@@ -76,6 +86,18 @@ ul li::after {
   z-index: -1;
   opacity: 0;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.proces:hover {
+  width: 18em;
+}
+
+.resultats:hover {
+  width: 18em;
+}
+
+.perque:hover {
+  width: 18em;
 }
 
 ul li:hover {
@@ -125,9 +147,107 @@ ul li:hover .title {
   transition-delay: 0.25s;
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 main {
   height: 50em;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-main-content {
+  width: 70%;
+  height: 100%;
+  background-color: #3d3d3d;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.274);
+  padding: 40px 60px;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  font-size: 45px;
+  color: #d4d4d4;
+}
+
+.row {
+  margin-top: 6em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 20rem;
+  border-radius: 20px;
+}
+
+.card__side {
+  height: 20rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  padding: 30px;
+  border: 1px solid #25a1b0;
+}
+
+.card__side--front-1 {
+  background-color: #444444;
+}
+
+.card_image--1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.card__side--front-2 {
+  background-color: #444444;
+}
+
+.card__side--front-3 {
+  background-color: #444444;
+}
+
+.card__side--back {
+  transform: rotateY(180deg);
+}
+
+.card__side--back-1 {
+  background-color: #444444;
+}
+
+.card__side--back-2 {
+  background-color: #444444;
+}
+
+.card__side--back-3 {
+  background-color: #444444;
+}
+
+.card:hover .card__side--front-1,
+.card:hover .card__side--front-2,
+.card:hover .card__side--front-3 {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  transform: rotateY(0);
 }
 
 footer {
